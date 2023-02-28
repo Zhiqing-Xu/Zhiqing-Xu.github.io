@@ -1,6 +1,6 @@
 # Build Settings
-markdown: kradown
-theme: hacker
+markdown: kramdown
+theme: Hacker
 
 # Zhiqing-Xu.github.io
 
