@@ -13,6 +13,26 @@
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
     <link rel="icon" href="/assets/Portfolio Icon.jfif">
+
+
+    <!-- For music player -->
+    <!-- * font awesome cdn -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- * external css / stylesheet -->
+    <link rel="stylesheet" href="./assets_music/css/style.css" />
+
+    <!-- * linking favicon -->
+    <link
+    rel="shortcut icon"
+    href="./assets_music/img/favicon.png"
+    type="image/png"
+    />
+
+    
 </head>
 
 
@@ -21,42 +41,185 @@
     <h1 id="main-heading" class="gradiant-effect"></h1>
     <!-- MAIN DIVIDER WHICH CONTAINS ALL THE OTHER CATEGORY-->
     <div id="main-box">
-        <!-- ABOUT ME SECTION -->
+
+
+
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- ABOUT ME SECTION -->
         <div class="d-flex justify-content-center" id="about-me">
             <div class="d-flex">
                 <div class="flex-shrink-0">
                     <!-- IMAGE OF THE PERSON-->
                     <img class="gradiant-effect" src="assets/Portfolio_Icon_3.png" alt="image">
                 </div>
+
                 <div class="flex-grow-1 ms-5 name-heading">
                     <!-- NAME OF THE PERSON -->
                     <h1>Zhiqing Xu</h1>
                     <!-- ABOUT HIM -->
                     <p class="gray-text">
-                        Hello, World! 👋 <br>
-                        I am Zhiqing Xu, a Chemical Engineering PhD student from 
-                        <b class="hue-bold"><a href="https://lmse.utoronto.ca/">LMSE, University of Toronto</a></b>. <br>
-                        My research has been focusing on deep learning applications (i.e., NLP) in protein design & bioinformatics.
-                        My published work include sequence-to-function learning, compound-protein-interaction prediction, 
-                        molecule property prediction, biochemical pathway prediction. 
-                        The open-source code for these projects can be found in my github repositories listed below. <br>
-                        My ultimate career goal is to become a data scientist and AI engineer. <a href="pages/music.html">Music</a>
+                        Hello, World! 👋 
+                        <br> I am Zhiqing Xu, a Chemical Engineering PhD candidate at the
+                        <b><a href="https://lmse.utoronto.ca/">Laboratory for Metabolic Systems Engineering (LMSE), University of Toronto</a></b>.
+                        <br> My research primarily focuses on the application of deep learning techniques, such as natural language processing (NLP), 
+                        to protein design and bioinformatics. My published work encompasses a range of topics, including sequence-to-function learning, 
+                        compound-protein interaction prediction, molecular property prediction, and biochemical pathway prediction. 
+                        You can find the open-source code for these projects in my GitHub repositories listed below. 
+                        <br> As I continue my academic and professional journey, my ultimate career goal is to become a skilled data scientist and AI engineer, 
+                        making contributions to the field of deep learning applications in various fields.
+
                     </p>
                 </div>
+
             </div>
         </div>
 
-        <h1 class="gradiant-effect" id="second-heading">MAIN SKILLS</h1>
+
+
+
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- MP3 Player Wrapper -->
+
+        <div class="container"> <!-- Add this parent container -->
+            <h1>Music Player</h1>
+
+            <div class="music-container play">
+                <div class="music-info">
+                    <h4 id="title">Ukulele</h4>
+
+                    <div class="progress-container">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <!-- audio / music -->
+                <audio src="./assets_music/music/ukulele.mp3" id="audio"></audio>
+
+                <!-- thumbnail -->
+                <div class="img-container">
+                    <img
+                        src="./assets_music/thumbnail/ukulele.jpg"
+                        alt="music-cover"
+                        id="cover"
+                    />
+                </div>
+
+                <!-- navigation -->
+                <div class="navigation">
+                    <button id="prev" class="action-btn">
+                        <i class="fas fa-backward"></i>
+                    </button>
+
+                    <button id="play" class="action-btn action-btn-big">
+                        <i class="fas fa-play"></i>
+                    </button>
+
+                    <button id="next" class="action-btn">
+                        <i class="fas fa-forward"></i>
+                    </button>
+
+                    <div class="volume-container">
+                        <i class="fas fa-volume-up"></i>
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- playlist-container -->
+            <div class="playlist-container">
+                <h3>Playlist</h3>
+                <ul class="playlist">
+                    <!-- Playlist items will be added dynamically using JavaScript -->
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- * external js / script -->
+        <script src="./assets_music/js/script.js"></script>
+
+   
+
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- MAIN SKILLS -->
+
+        <h1 class="gradiant-effect" id="second-heading"> MAIN SKILLS </h1>
         <br>
-        <!-- SKILLS OR TECH HE KNOWS -->
+        
         <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
-            <i class="fab fa-python skills-icon" data-tippy-content="Python"></i>
             <!-- <i class="fab fa-css3 skills-icon" data-tippy-content="CSS3"></i> -->
-            <i class="fab fa-markdown skills-icon" data-tippy-content="Markdown"></i>
-            <i class="fab fa-html5 skills-icon" data-tippy-content="HTML"></i>
-            <i class="fab fa-js-square skills-icon" data-tippy-content="JavaScript"></i>
-            <i class="fab fa-wordpress skills-icon" data-tippy-content="Wordpress"></i>
-            <i class="fab fa-r-project skills-icon" data-tippy-content="R programming"></i>
+            <i class = "fab fa-python    skills-icon"     data-tippy-content = "Python"        ></i>
+            <i class = "fab fa-java      skills-icon"     data-tippy-content = "Java"          ></i>
+
+            <i class = "fab fa-js-square skills-icon"     data-tippy-content = "JavaScript"    ></i>   
+            <i class = "fab fa-html5     skills-icon"     data-tippy-content = "HTML5"          ></i>
+            <i class = "fab fa-wordpress skills-icon"     data-tippy-content = "Wordpress"     ></i>
+
+            <i class = "fab fa-markdown  skills-icon"     data-tippy-content = "Markdown"      ></i>
+            <i class = "fab fa-r-project skills-icon"     data-tippy-content = "R programming" ></i>
+
+            <i class = "fab fa-linux     skills-icon"     data-tippy-content = "Linux"         ></i>
+
+        </div>
+
+        <br><br>
+
+        <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/color/64/null/opencv.png"
+                data-tippy-content="Computer Vision (CV)">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/external-solidglyph-m-oki-orlando/64/FFFF00/external-NLP-artificial-intelligence-solidglyph-m-oki-orlando.png"
+                data-tippy-content="Natural Language Processing (NLP)">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/fluency/64/null/matlab.png"
+                data-tippy-content="MatLab">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/64/null/external-autodesk-an-american-multinational-software-corporation-for-the-architecture-and-other-engineering-services-logo-color-tal-revivo.png"
+                data-tippy-content="AutoDesk Softwares">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/color/64/null/solidworks.png"
+                data-tippy-content="SolidWorks">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-cad-3d-printing-flaticons-lineal-color-flat-icons.png"
+                data-tippy-content="Computer Aided Design (CAD)">
+            </img>
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/fluency/64/FFFFFF/texshop.png"
+                data-tippy-content="Computer Vision (CV)">
+            </img>
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/color-glass/64/null/airodynamic.png"
+                data-tippy-content="Computational Fluid Dynamics (CFD) Simulation">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/ios-filled/64/FFC0CB/test-tube.png"
+                data-tippy-content="Reaction Simulation (Aspen)">
+            </img> 
+
+            <img class="connect-elements" 
+                src="https://img.icons8.com/color/64/null/davinci-resolve.png"
+                data-tippy-content="BlackMagic Davinci">
+            </img> 
+            
         </div>
 
 
@@ -289,6 +452,8 @@
 
         <br>
         <h1 class="gradiant-effect" id="connect"> CONNECT WITH ME</h1><br>
+        
+
 
         <div class="d-flex justify-content-center align-content-between flex-wrap gradient-effect"
             id="connect-elements">
