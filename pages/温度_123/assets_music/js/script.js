@@ -131,6 +131,7 @@ function selectSongFromPlaylist(e) {
     updatePlaylist();
 }
 
+
 // Add this function to update the active song in the playlist
 function updatePlaylist() {
     Array.from(playlist.children).forEach((listItem, index) => { // Use playlist.children instead of playlist.childNodes
@@ -142,7 +143,6 @@ function updatePlaylist() {
 }
 
 
-// ... (rest of the code remains the same)
 
 // song prev / next play function
 function prevSong() {
@@ -162,6 +162,8 @@ function prevSong() {
     }
     updatePlaylist();
 }
+
+
 
 function nextSong() {
     songIndex++;

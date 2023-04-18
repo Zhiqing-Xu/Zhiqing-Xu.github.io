@@ -222,7 +222,7 @@ body {
 
 .playlist {
   width: 100%; /* Add this line */
-  max-height: 1600px;
+  max-height: 2000px;
   overflow-y: auto;
   scrollbar-width: thin;
   padding: 10px;
