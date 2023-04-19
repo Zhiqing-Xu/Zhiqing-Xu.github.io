@@ -99,6 +99,14 @@ html {
     padding-top: 30px;
 }
 
+.name-image-container {
+    display: flex;
+    align-items: center;
+}
+.name-image-container img {
+    margin-right: 10px;
+}
+
 #about-me .name-heading {
     max-width: 50rem;
     min-width: 25rem;
@@ -110,13 +118,13 @@ html {
     border-radius: 5rem;
     border: 3px solid;
     border-color: orange;
-    margin-right: -5px;
+    margin-right: 15px;
 }
 
 .container_skill {
     width: 99%; /* You can adjust this value as per your preference */
-    max-width: 50rem; /* You can adjust this value as per your preference */
-    min-width: 30rem;
+    max-width: 70rem; /* You can adjust this value as per your preference */
+    min-width: 25rem;
     margin: 0 auto;
 
   }
