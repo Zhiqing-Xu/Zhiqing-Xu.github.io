@@ -43,7 +43,9 @@ body {
 .img-container {
   position: relative;
   width: 600px;
+
 }
+
 .img-container::after {
   content: " ";
   background-color: #FFFFFF;
@@ -64,6 +66,7 @@ body {
   -ms-transform: translate(-50%, 50%);
   -o-transform: translate(-50%, 50%);
 }
+
 .img-container img {
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -71,11 +74,11 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   object-fit: cover;
-  height: 110px;
-  width: 110px;
+  height: 120px;
+  width: 120px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 10px;
+  left: -15px;
   animation: rotate 3s linear infinite;
   -webkit-animation: rotate 3s linear infinite;
   animation-play-state: paused;
@@ -108,6 +111,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+  margin-right: -40px;
 }
 
 .action-btn {
@@ -166,6 +170,7 @@ body {
 
 .music-info h4 {
   margin: 0;
+  margin-left: 5px;
 }
 
 .progress-container {
@@ -173,12 +178,13 @@ body {
   cursor: pointer;
   margin: 10px 0;
   height: 6px;
-  width: 100%;
+  width: 96%;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+  margin-left: 5px;
 }
 
 .progress {
@@ -216,7 +222,7 @@ body {
 
 .playlist {
   width: 100%; /* Add this line */
-  max-height: 800px;
+  max-height: 2000px;
   overflow-y: auto;
   scrollbar-width: thin;
   padding: 10px;
@@ -238,16 +244,19 @@ body {
 
 
 .container {
-  width: 80%; /* You can adjust this value as per your preference */
+  width: 95%; /* You can adjust this value as per your preference */
   max-width: 800px; /* You can adjust this value as per your preference */
   margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: -10px;
 }
 
 .volume-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0px;
+  margin-top: 10px;
+  margin-left: -35px;
 }
 
 .volume-container i {
@@ -263,8 +272,13 @@ body {
 }
 
 
+.navigation {
+  flex-direction: column;
+}
 
-
-
-
-
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -5px;
+}

@@ -16,6 +16,7 @@ const volumeSlider = document.querySelector("#volume");
 const songs = ["hey", "summer", "ukulele"];
 
 
+
 // keep track of songs
 let songIndex = 0;
 
@@ -131,9 +132,10 @@ function selectSongFromPlaylist(e) {
     updatePlaylist();
 }
 
+
 // Add this function to update the active song in the playlist
 function updatePlaylist() {
-    playlist.childNodes.forEach((listItem, index) => {
+    Array.from(playlist.children).forEach((listItem, index) => { // Use playlist.children instead of playlist.childNodes
         listItem.classList.remove("active");
         if (index === songIndex) {
             listItem.classList.add("active");
@@ -142,7 +144,6 @@ function updatePlaylist() {
 }
 
 
-// ... (rest of the code remains the same)
 
 // song prev / next play function
 function prevSong() {
@@ -162,6 +163,8 @@ function prevSong() {
     }
     updatePlaylist();
 }
+
+
 
 function nextSong() {
     songIndex++;

@@ -46,12 +46,13 @@
 
 <!-- ###################################################################################################################################################### -->
 <!-- ###################################################################################################################################################### -->
-<!-- ABOUT ME SECTION -->
+<!-- INTRO -->
         <div class="d-flex justify-content-center" id="about-me">
             <div class="d-flex">
+                
                 <div class="flex-shrink-0">
                     <!-- IMAGE OF THE PERSON-->
-                    <img class="gradiant-effect" src="assets/Portfolio_Icon_3.png" alt="image">
+                    <img src="assets/Portfolio_Icon_0.jfif" alt="image">
                 </div>
 
                 <div class="flex-grow-1 ms-5 name-heading">
@@ -82,8 +83,9 @@
 <!-- ###################################################################################################################################################### -->
 <!-- MP3 Player Wrapper -->
 
+
+
         <div class="container"> <!-- Add this parent container -->
-            <h1>Music Player</h1>
 
             <div class="music-container play">
                 <div class="music-info">
@@ -95,12 +97,12 @@
                 </div>
 
                 <!-- audio / music -->
-                <audio src="./assets_music/music/ukulele.mp3" id="audio"></audio>
+                <audio src="./assets_music/music/mascara.mp3" id="audio"></audio>
 
                 <!-- thumbnail -->
                 <div class="img-container">
                     <img
-                        src="./assets_music/thumbnail/ukulele.jpg"
+                        src="./assets_music/thumbnail/general.png"
                         alt="music-cover"
                         id="cover"
                     />
@@ -108,24 +110,23 @@
 
                 <!-- navigation -->
                 <div class="navigation">
-                    <button id="prev" class="action-btn">
-                        <i class="fas fa-backward"></i>
-                    </button>
-
-                    <button id="play" class="action-btn action-btn-big">
-                        <i class="fas fa-play"></i>
-                    </button>
-
-                    <button id="next" class="action-btn">
-                        <i class="fas fa-forward"></i>
-                    </button>
-
+                    <div class="buttons-container">
+                        <button id="prev" class="action-btn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button id="play" class="action-btn action-btn-big">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="next" class="action-btn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                    
                     <div class="volume-container">
                         <i class="fas fa-volume-up"></i>
                         <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
                     </div>
-
-                </div>
+                    </div>  
             </div>
 
             <!-- playlist-container -->
@@ -135,11 +136,12 @@
                     <!-- Playlist items will be added dynamically using JavaScript -->
                 </ul>
             </div>
-            
         </div>
 
         <!-- * external js / script -->
         <script src="./assets_music/js/script.js"></script>
+            
+
 
    
 
@@ -149,87 +151,93 @@
 
         <h1 class="gradiant-effect" id="second-heading"> MAIN SKILLS </h1>
         <br>
-        
-        <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
-            <!-- <i class="fab fa-css3 skills-icon" data-tippy-content="CSS3"></i> -->
-            <i class = "fab fa-python    skills-icon"     data-tippy-content = "Python"        ></i>
-            <i class = "fab fa-java      skills-icon"     data-tippy-content = "Java"          ></i>
+        <div class="container_skill"> <!-- Add this parent container -->
+            <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
 
-            <i class = "fab fa-js-square skills-icon"     data-tippy-content = "JavaScript"    ></i>   
-            <i class = "fab fa-html5     skills-icon"     data-tippy-content = "HTML5"          ></i>
-            <i class = "fab fa-wordpress skills-icon"     data-tippy-content = "Wordpress"     ></i>
+                <!-- <i class="fab fa-css3 skills-icon" data-tippy-content="CSS3"></i> -->
+                <i class = "fab fa-python    skills-icon"     data-tippy-content = "Python"        ></i>
+                <i class = "fab fa-java      skills-icon"     data-tippy-content = "Java"          ></i>
 
-            <i class = "fab fa-markdown  skills-icon"     data-tippy-content = "Markdown"      ></i>
-            <i class = "fab fa-r-project skills-icon"     data-tippy-content = "R programming" ></i>
+                <i class = "fab fa-js-square skills-icon"     data-tippy-content = "JavaScript"    ></i>   
+                <i class = "fab fa-html5     skills-icon"     data-tippy-content = "HTML5"          ></i>
+                <i class = "fab fa-wordpress skills-icon"     data-tippy-content = "Wordpress"     ></i>
 
-            <i class = "fab fa-linux     skills-icon"     data-tippy-content = "Linux"         ></i>
+                <i class = "fab fa-markdown  skills-icon"     data-tippy-content = "Markdown"      ></i>
+                <i class = "fab fa-r-project skills-icon"     data-tippy-content = "R programming" ></i>
 
+                <i class = "fab fa-linux     skills-icon"     data-tippy-content = "Linux"         ></i>
+
+            </div>
         </div>
 
         <br><br>
 
-        <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
+        <div class="container_skill"> <!-- Add this parent container -->
+            <div class="d-flex justify-content-center align-content-between flex-wrap" id="skills">
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/color/64/null/opencv.png"
-                data-tippy-content="Computer Vision (CV)">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/color/64/null/opencv.png"
+                    data-tippy-content="Computer Vision (CV)">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/external-solidglyph-m-oki-orlando/64/FFFF00/external-NLP-artificial-intelligence-solidglyph-m-oki-orlando.png"
-                data-tippy-content="Natural Language Processing (NLP)">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/external-solidglyph-m-oki-orlando/64/FFFF00/external-NLP-artificial-intelligence-solidglyph-m-oki-orlando.png"
+                    data-tippy-content="Natural Language Processing (NLP)">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/fluency/64/null/matlab.png"
-                data-tippy-content="MatLab">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/fluency/64/null/matlab.png"
+                    data-tippy-content="MatLab">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/64/null/external-autodesk-an-american-multinational-software-corporation-for-the-architecture-and-other-engineering-services-logo-color-tal-revivo.png"
-                data-tippy-content="AutoDesk Softwares">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/64/null/external-autodesk-an-american-multinational-software-corporation-for-the-architecture-and-other-engineering-services-logo-color-tal-revivo.png"
+                    data-tippy-content="AutoDesk Softwares">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/color/64/null/solidworks.png"
-                data-tippy-content="SolidWorks">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/color/64/null/solidworks.png"
+                    data-tippy-content="SolidWorks">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-cad-3d-printing-flaticons-lineal-color-flat-icons.png"
-                data-tippy-content="Computer Aided Design (CAD)">
-            </img>
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-cad-3d-printing-flaticons-lineal-color-flat-icons.png"
+                    data-tippy-content="Computer Aided Design (CAD)">
+                </img>
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/fluency/64/FFFFFF/texshop.png"
-                data-tippy-content="Computer Vision (CV)">
-            </img>
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/fluency/64/FFFFFF/texshop.png"
+                    data-tippy-content="Computer Vision (CV)">
+                </img>
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/color-glass/64/null/airodynamic.png"
-                data-tippy-content="Computational Fluid Dynamics (CFD) Simulation">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/color-glass/64/null/airodynamic.png"
+                    data-tippy-content="Computational Fluid Dynamics (CFD) Simulation">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/ios-filled/64/FFC0CB/test-tube.png"
-                data-tippy-content="Reaction Simulation (Aspen)">
-            </img> 
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/ios-filled/64/FFC0CB/test-tube.png"
+                    data-tippy-content="Reaction Simulation (Aspen)">
+                </img> 
 
-            <img class="connect-elements" 
-                src="https://img.icons8.com/color/64/null/davinci-resolve.png"
-                data-tippy-content="BlackMagic Davinci">
-            </img> 
-            
+                <img class="connect-elements" 
+                    src="https://img.icons8.com/color/64/null/davinci-resolve.png"
+                    data-tippy-content="BlackMagic Davinci">
+                </img> 
+                
+            </div>
         </div>
 
+        
 
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- ABOUT ME -->
         <div class="container-xxl gradiant-effect" style=" max-width: 1034px;" id="third-heading">
             <h1>ABOUT ME</h1>
         </div>
 
 
-
-        <!-- PROJECT THAT HE OWNS -->
         <div class="container-xxl" style="max-width: 1034px;" id="About Me">
             <div class="row row-cols-1 row-cols-md-3 g-4">
 
@@ -239,7 +247,7 @@
                             <a href="https://github.com/Zhiqing-Xu" target="_blank" rel="noopener noreferrer">
                                 <h5 class="card-title"><img src="/assets/GitHub-logo.png" width="40px">
                                     Zhiqing Xu</h5>
-                                <p class="card-text">My Github <code>Stats</code> 📊 </p>
+                                <p class="card-text">My Github Home Page and <code>Stats</code> 📊 </p>
                             </a>
                         </div>
                     </div>
@@ -263,7 +271,7 @@
                 <div class="col">
                     <div class="card mb-3 h-100" style="max-width: 24rem;">
                         <div class="card-body">
-                            <a href="https://github.com/TheKaushikGoswami/hello-world" target="_blank" rel="noopener noreferrer">
+                            <a href="https://scholar.google.ca/citations?user=zZ65mV4AAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">
                                 <h5 class="card-title"><img src="/assets/Paper-logo.png" width="40px">
                                      Publications 
                                 </h5>
@@ -279,20 +287,20 @@
 
 
 
-
-
-
-
-
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- PROJECTS -->
 
 
         <div class="container-xxl gradiant-effect" style=" max-width: 1034px;" id="third-heading">
-            <h1>PROJECTS</h1>
+            <h1>RESEARCH PROJECTS</h1>
         </div>
 
         <!-- PROJECT THAT HE OWNS -->
         <div class="container-xxl" style="max-width: 1034px;" id="projects">
             <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
 
 
                 <div class="col">
@@ -303,7 +311,7 @@
                                     <font size="3.7">Anneal-Path</font>
                                 </h5>
                                 <p class="card-text">
-                                    A Systematic Branched Novel <code>Biochemical Reaction Pathways</code> Identification Tool. <br><br><br><br>
+                                    A Systematic Branched Novel <code>Biochemical Reaction Pathways</code> Identification Tool. <br><br><br>
                                 </p>
                                 <a href="https://pubs.acs.org/doi/10.1021/acs.iecr.1c02211" title="Anneal-Path Paper">
                                     Anneal-Path Paper (CLICK HERE!)
@@ -347,16 +355,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
-
 
 
                 <div class="col">
@@ -408,107 +406,153 @@
 
 
 
-
-
-
-
-
-
-
-
-
-                <div class="col">
-                    <div class="card mb-3 h-100" style="max-width: 24rem;">
-                        <div class="card-body">
-                            <a href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io" target="_blank"
-                                rel="noopener noreferrer">
-                                <h5 class="card-title"><img
-                                        src="https://img.icons8.com/bubbles/50/000000/domain.png" />Portfolio</img></h5>
-                                <p class="card-text">The Open-Source code for the <code>Personal Portfolio</code> this
-                                    website is
-                                    coming from! A minimal and ambient portfolio template for Developers! ⚡</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card mb-3 h-100" style="max-width: 24rem;">
-                        <div class="card-body">
-                            <a href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io" target="_blank"
-                                rel="noopener noreferrer">
-                                <h5 class="card-title"><img
-                                        src="https://img.icons8.com/bubbles/50/000000/domain.png" />Portfolio</img></h5>
-                                <p class="card-text">The Open-Source code for the <code>Personal Portfolio</code> this
-                                    website is
-                                    coming from! A minimal and ambient portfolio template for Developers! ⚡</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
+
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- OTHER PROJECTS -->
+
+
+<div class="container-xxl gradiant-effect" style=" max-width: 1034px;" id="third-heading">
+    <h1> OTHER PROJECTS </h1>
+</div>
+
+<!-- PROJECT THAT HE OWNS -->
+<div class="container-xxl" style="max-width: 1034px;" id="projects">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+
+        <div class="col">
+            <div class="card mb-3 h-100" style="max-width: 24rem;">
+                <div class="card-body">
+                    <a href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io" target="_blank"
+                        rel="noopener noreferrer">
+                        <h5 class="card-title"><img
+                                src="https://img.icons8.com/bubbles/50/000000/domain.png" />Portfolio</img></h5>
+                        <p class="card-text">The Open-Source code for the <code>Personal Portfolio</code> this
+                            website is
+                            coming from! A minimal and ambient portfolio template for Developers! ⚡</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="col">
+            <div class="card mb-3 h-100" style="max-width: 24rem;">
+                <div class="card-body">
+                    <a href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io" target="_blank"
+                        rel="noopener noreferrer">
+                        <h5 class="card-title"><img
+                                src="https://img.icons8.com/bubbles/50/000000/domain.png" />Portfolio</img></h5>
+                        <p class="card-text">The Open-Source code for the <code>Personal Portfolio</code> this
+                            website is
+                            coming from! A minimal and ambient portfolio template for Developers! ⚡</p>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="col">
+            <div class="card mb-3 h-100" style="max-width: 24rem;">
+                <div class="card-body">
+                    <a href="https://github.com/TheKaushikGoswami/thekaushikgoswami.github.io" target="_blank"
+                        rel="noopener noreferrer">
+                        <h5 class="card-title"><img
+                                src="https://img.icons8.com/bubbles/50/000000/domain.png" />Portfolio</img></h5>
+                        <p class="card-text">The Open-Source code for the <code>Personal Portfolio</code> this
+                            website is
+                            coming from! A minimal and ambient portfolio template for Developers! ⚡</p>
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ###################################################################################################################################################### -->
+<!-- ###################################################################################################################################################### -->
+<!-- CONNECT WITH ME -->
+
         <br>
-        <h1 class="gradiant-effect" id="connect"> CONNECT WITH ME</h1><br>
+        <h1 class="gradiant-effect" id="connect"> CONNECT WITH ME </h1><br>
         
 
 
         <div class="d-flex justify-content-center align-content-between flex-wrap gradient-effect"
             id="connect-elements">
-            <a href="https://twitter.com/Being_Goswami" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="https://twitter.com/Being_Goswami" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/twitter--v2.png"
                     data-tippy-content="Twitter"></img>
-            </a>
-            <a href="https://instagram.com/thekaushikgoswami" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <!-- <a href="https://instagram.com/thekaushikgoswami" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/instagram-new--v2.png"
                     data-tippy-content="Instagram"></img>
-            </a>
-            <a href="https://pinterest.com/thekaushikgoswami" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <!-- <a href="https://pinterest.com/thekaushikgoswami" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/pinterest.png"
                     data-tippy-content="Pinterest"></img>
-            </a>
+            </a> -->
             <a href="https://discord.gg/MFpy66jWFA" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/discord-logo.png"
                     data-tippy-content="Discord"></img>
             </a>
-            <a href="https://quora.com/profile/TheKaushikGoswami" target="_blank" rel="noopener noreferrer">
+            <!-- <a href="https://quora.com/profile/TheKaushikGoswami" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/quora--v1.png"
                     data-tippy-content="Quora"></img>
-            </a>
-            <a href="https://reddit.com/user/TheKaushik01" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <!-- <a href="https://reddit.com/user/TheKaushik01" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/reddit--v4.png"
                     data-tippy-content="Reddit"></img>
-            </a>
-            <a href="https://open.spotify.com/user/rwu8m7m34mit13j931l5618p5" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <!-- <a href="https://open.spotify.com/user/rwu8m7m34mit13j931l5618p5" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/spotify.png"
                     data-tippy-content="Spotify"></img>
-            </a>
-            <a href="mailto:thekaushikgoswami@gmail.com" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <a href="mailto:palladium.xu@gmail.com" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/gmail-new.png"
                     data-tippy-content="Gmail"></img>
             </a>
-            <a href="https://github.com/TheKaushikGoswami" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/zhiqing-xu" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/github--v1.png"
                     data-tippy-content="GitHub"></img>
             </a>
-            <a href="https://stackoverflow.com/users/14279011/thekaushikgoswami" target="_blank"
+            <!-- <a href="https://stackoverflow.com/users/14279011/thekaushikgoswami" target="_blank"
                 rel="noopener noreferrer">
                 <img class="connect-elements"
                     src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/40/000000/external-stack-overflow-is-a-question-and-answer-site-for-professional-logo-color-tal-revivo.png"
                     data-tippy-content="Stackoverflow"></img>
-            </a>
-            <a href="https://medium.com/@thekaushikgoswami" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <!-- <a href="https://medium.com/@thekaushikgoswami" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/material/40/000000/medium-logo.png"
                     data-tippy-content="Medium" style="filter: invert(100%)"></img>
-            </a>
-            <a href="https://linkedin.com/in/thekaushikgoswami" target="_blank" rel="noopener noreferrer">
+            </a> -->
+            <a href="https://www.linkedin.com/in/zhiqing-xu/" target="_blank" rel="noopener noreferrer">
                 <img class="connect-elements" src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png"
                     data-tippy-content="LinkedIn">
             </a>
         </div>
         <br><br>
+
+
 
         <!-- Footer  -->
         <footer class="sticky__footer">
