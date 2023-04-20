@@ -12,14 +12,6 @@
 
 
 
-## Website Preview
-
-<a href="https://zhiqing-xu.github.io" target="_blank">
-    <img src="./readme-assets/Website_Demo.png" align="center" alt="website preview">
-</a><br><br>
-
-
-
 ## 📚 Sections
 
 - [x] Profile Picture
