@@ -13,7 +13,7 @@ const volumeSlider = document.querySelector("#volume");
 
 
 // song titles
-const songs = ['明天不喝酒'];
+const songs = ['明天不喝酒', '爱殇 - FT'];
 
 
 
