@@ -10,7 +10,7 @@ const cover = document.querySelector("#cover");
 const playlistContainer = document.querySelector(".playlist-container");
 const playlist = document.querySelector(".playlist");
 const volumeSlider = document.querySelector("#volume");
-
+const loopBtn = document.querySelector("#loop");
 
 // song titles
 const songs = ['明天不喝酒', '爱殇 - FT'];
@@ -235,6 +235,13 @@ volumeSlider.addEventListener("input", (e) => {
     audio.volume = e.target.value;
 });
 
+loopBtn.addEventListener("click", () => {
+    audio.loop = !audio.loop;
+    loopBtn.classList.toggle("active", audio.loop);
+    loopBtn.style.color = audio.loop ? "pink" : "black"; // Add this line
+});
+
+loopBtn.classList.toggle("active", audio.loop);
 
 
 // change song events

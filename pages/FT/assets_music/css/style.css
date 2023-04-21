@@ -256,18 +256,22 @@ body {
   justify-content: center;
   margin-top: 10px;
   margin-left: -35px;
+  margin-right: -60px;
 }
 
 .volume-container i {
   margin-right: 10px;
   margin-left : 20px;
   margin-top: 0px;
+
 }
 
 .volume-container input[type="range"] {
   width: 100px;
   margin-top: 0px;
   background-color: black;
+  margin-right: -20px;
+
 }
 
 
@@ -281,3 +285,11 @@ body {
   align-items: center;
   margin-top: -5px;
 }
+
+
+.action-btn.active {
+  color: lightskyblue;
+}
+
+
+
