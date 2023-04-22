@@ -24,7 +24,7 @@ body {
 }
 
 .music-container {
-  background-color: #ADD8E6;
+  background-color: #fdff79;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -207,7 +207,7 @@ body {
 /* Add these styles to your style.css */
 .playlist-container {
   width: 100%; /* Add this line */
-  background-color: #ADD8E6;
+  background-color: #faff97;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
@@ -256,18 +256,22 @@ body {
   justify-content: center;
   margin-top: 10px;
   margin-left: -35px;
+  margin-right: -60px;
 }
 
 .volume-container i {
   margin-right: 10px;
   margin-left : 20px;
   margin-top: 0px;
+
 }
 
 .volume-container input[type="range"] {
   width: 100px;
   margin-top: 0px;
   background-color: black;
+  margin-right: -20px;
+
 }
 
 
@@ -281,3 +285,11 @@ body {
   align-items: center;
   margin-top: -5px;
 }
+
+
+.action-btn.active {
+  color: lightskyblue;
+}
+
+
+
