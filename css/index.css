@@ -2,8 +2,8 @@
 
 body,
 html {
-    background-color: #111111;
-    color: white;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     height: 100%; 
 }
 
@@ -15,6 +15,7 @@ html {
 #about-me h1 {
     font-family: 'Hammersmith One', sans-serif;
 }
+
 
 #second-heading {
     font-family: monospace;
@@ -39,6 +40,8 @@ html {
     margin: 0 0 0 20px;
 }
 
+
+
 #third-heading h1 {
     max-width: 1034px;
     display: flex;
@@ -47,7 +50,6 @@ html {
     width: 100%;
     margin-top: 30px
 }
-
 
 #third-heading h1:after {
     content: '';
@@ -59,6 +61,29 @@ html {
 #third-heading h1:after {
     margin: 15px 0 0 10px;
 }
+
+
+
+#fourth-heading h1 {
+    max-width: 1034px;
+    display: flex;
+    font-size: 25px;
+    font-family: monospace;
+    width: 100%;
+    margin-top: 30px
+}
+
+#fourth-heading h1:before {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+#fourth-heading h1:before {
+    margin: 15px 10px 0 0;
+}
+
 
 /* ---------------------------------- */
 
@@ -180,8 +205,14 @@ html {
 /* ALL LINKS */
 
 a{
-    text-decoration:none;
+    text-decoration: none;
 }
+
+b:hover {
+    text-decoration: none;
+}
+
+
 
 /* -------------------------- */
 
