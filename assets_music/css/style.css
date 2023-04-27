@@ -242,6 +242,12 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .container {
   width: 99%; /* You can adjust this value as per your preference */

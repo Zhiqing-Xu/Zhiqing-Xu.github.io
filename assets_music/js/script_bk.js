@@ -10,6 +10,7 @@ const cover = document.querySelector("#cover");
 const playlistContainer = document.querySelector(".playlist-container");
 const playlist = document.querySelector(".playlist");
 const volumeSlider = document.querySelector("#volume");
+const loopBtn = document.querySelector("#loop");
 
 
 // song titles
@@ -103,11 +104,32 @@ function pauseSong() {
 function createPlaylistItems() {
     songs.forEach((song, index) => {
         const listItem = document.createElement("li");
-        listItem.textContent = song;
+        listItem.classList.add("song-item"); // Add this class
+
+        // Create a div for the song title
+        const songTitle = document.createElement("span");
+        songTitle.textContent = song;
+
+        // Create the download link
+        const downloadLink = document.createElement("a");
+        downloadLink.href = `assets_music/music/${song}.mp3`;
+        downloadLink.download = `${song}.mp3`;
+        downloadLink.title = "Download " + song;
+        
+        // Create the download icon and add it to the download link
+        const downloadIcon = document.createElement("i");
+        downloadIcon.className = "fas fa-download";
+        downloadLink.appendChild(downloadIcon);
+
         listItem.dataset.index = index;
         if (index === songIndex) {
             listItem.classList.add("active");
         }
+
+        // Append the song title and the download link to the list item
+        listItem.appendChild(songTitle);
+        listItem.appendChild(downloadLink);
+        
         listItem.addEventListener("click", selectSongFromPlaylist);
         playlist.appendChild(listItem);
     });
