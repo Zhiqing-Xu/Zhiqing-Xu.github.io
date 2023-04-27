@@ -32,16 +32,10 @@ createPlaylistItems();
 function loadSong(song) {
     title.innerText = song;
 
-    cover.src = `assets_music/thumbnail/${song}.jpg`;
-    cover.onerror = () => {
-        cover.src = "assets_music/thumbnail/general.png";
-      };
+    cover.src = "assets_music/thumbnail/general.png";
 
 
     audio.src = `assets_music/music/${song}.mp3`;
-    audio.onerror = () => {
-        audio.src = `assets_music/music/${song}.wav`;
-    };
     
 }
 
@@ -117,6 +111,11 @@ function createPlaylistItems() {
         downloadLink.href = `assets_music/music/${song}.mp3`;
         downloadLink.download = `${song}.mp3`;
         downloadLink.title = "Download " + song;
+ 
+        // Stop the click event from propagating to the li element
+        downloadLink.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
         
         // Create the download icon and add it to the download link
         const downloadIcon = document.createElement("i");
@@ -139,7 +138,7 @@ function createPlaylistItems() {
 
 // Add this function to handle song selection from the playlist
 function selectSongFromPlaylist(e) {
-    const selectedSong = e.target;
+    const selectedSong = e.target.closest("li");
     songIndex = parseInt(selectedSong.getAttribute("data-index"));
 
     loadSong(songs[songIndex]);
@@ -154,6 +153,7 @@ function selectSongFromPlaylist(e) {
 
     updatePlaylist();
 }
+
 
 
 // Add this function to update the active song in the playlist
