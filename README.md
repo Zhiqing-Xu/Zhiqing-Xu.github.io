@@ -1,8 +1,8 @@
 # Personal Portfolio ⚡
 
-> A clean, beautiful, ambient portfolio template for Software Developers!
+- A clean, beautiful, ambient portfolio template for Software Developers!
 
-> https://zhiqing-xu.github.io
+- https://zhiqing-xu.github.io
 
 
 <!-- ![GitHub stars](https://img.shields.io/github/stars/zhiqing-xu/zhiqing-xu.github.io?style=for-the-badge) 
