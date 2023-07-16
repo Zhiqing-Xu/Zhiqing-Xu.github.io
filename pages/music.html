@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Password Protection</title>
+    <style>
+        .incorrect-password {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <label for="password">Enter password:</label>
+        <input type="password" id="password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="wrong-password" class="incorrect-password">Incorrect password!</p>
+    </div>
+
+    <script>
+        var correctPassword = 'cyc';
+        var redirectUrl = './cyc/m.html'; // replace with your URL
+
+        function checkPassword() {
+            var enteredPassword = document.getElementById('password').value;
+            if(enteredPassword === correctPassword) {
+                window.location.href = redirectUrl;
+            } else {
+                document.getElementById('wrong-password').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
