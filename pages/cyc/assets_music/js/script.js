@@ -16,10 +16,8 @@ const loopBtn = document.querySelector("#loop");
 // song titles
 const songs = ['宝贝宝贝'];
 
-
 // keep track of songs
 let songIndex = 0;
-
 
 // initially load song info DOM
 loadSong(songs[songIndex]);
@@ -31,7 +29,6 @@ function loadSong(song) {
     title.innerText = song;
 
     cover.src = "assets_music/thumbnail/general.png";
-
 
     audio.src = `assets_music/music/${song}.mp3`;
     
@@ -207,7 +204,7 @@ function nextSong() {
 
 function initializePlayer() {
     // Mute the audio initially
-    audio.muted = true;
+    audio.muted = false;
 
     // Try to play the song
     tryPlaySong();

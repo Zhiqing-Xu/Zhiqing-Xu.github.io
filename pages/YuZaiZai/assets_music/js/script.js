@@ -207,7 +207,7 @@ function nextSong() {
 
 function initializePlayer() {
     // Mute the audio initially
-    audio.muted = true;
+    audio.muted = false;
 
     // Try to play the song
     tryPlaySong();
