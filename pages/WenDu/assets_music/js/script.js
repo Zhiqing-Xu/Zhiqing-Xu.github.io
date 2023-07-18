@@ -15,17 +15,18 @@ const loopBtn = document.querySelector("#loop");
 
 
 // song titles
-let songs = [];
+const songs = [];
 
 fetch('../../audio_list.txt')
     .then(response => response.text())
     .then(data => {
+        console.log('Fetched data:', data); // Add this line to print out the data
+
         // Assume data is a string in the format ['song1', 'song2', 'song3', ...]
         songs = JSON.parse(data.replace(/'/g, '"')); // Replace single quotes with double quotes for JSON parsing
         // Rest of the code that depends on songs array
     })
     .catch(error => console.error('Error:', error));
-
 
 
 // keep track of songs
