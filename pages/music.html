@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Password Protection</title>
-    <style>
-        .incorrect-password {
-            color: red;
-            display: none;
-        }
-    </style>
+    <title>Music Page</title>
+    <link rel="stylesheet" type="text/css" href="./music.css">
 </head>
 <body>
-    <div id="login">
-        <label for="password">Enter password:</label>
-        <input type="password" id="password">
-        <button onclick="checkPassword()">Submit</button>
-        <p id="wrong-password" class="incorrect-password">Incorrect password!</p>
+    <div class="container">
+        <div class="box">
+            <h1>Enter Your Music Code</h1>
+            <form id="login">
+                <label for="code">Enter code:</label>
+                <input type="text" id="code" autofocus>
+                <button type="submit">Submit</button>
+                <p id="wrong-code" class="incorrect-code">Incorrect Code!</p>
+            </form>
+        </div>
     </div>
 
     <script>
-        var correctPassword = 'cyc';
-        var redirectUrl = './cyc/m.html'; // replace with your URL
+        var redirectUrls = {
+            'cyc'  : './ChenChen/music.html'  ,
+            'ft'   : './FanTing/music.html'   ,
+            'wd'   : './WenDu/music.html'     ,
+            'yl'   : './YiLuo/music.html'     ,
+            'yzz'  : './YuZaiZai/music.html'  ,
 
-        function checkPassword() {
-            var enteredPassword = document.getElementById('password').value;
-            if(enteredPassword === correctPassword) {
-                window.location.href = redirectUrl;
+            // Add more codes and their corresponding URLs as needed.
+        };
+
+        var loginForm = document.getElementById('login');
+        loginForm.addEventListener('submit', function(event) {
+            // prevent the form from submitting normally
+            event.preventDefault();
+
+            var enteredCode = document.getElementById('code').value;
+            if(redirectUrls.hasOwnProperty(enteredCode)) {
+                window.location.href = redirectUrls[enteredCode];
             } else {
-                document.getElementById('wrong-password').style.display = 'block';
+                document.getElementById('wrong-code').style.display = 'block';
             }
-        }
+        });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+    <script src="./music.js"></script>
+
 </body>
 </html>
