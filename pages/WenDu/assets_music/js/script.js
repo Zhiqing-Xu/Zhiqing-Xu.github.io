@@ -17,7 +17,7 @@ const loopBtn = document.querySelector("#loop");
 // song titles
 const songs = [];
 
-fetch('../../audio_list.txt')
+fetch('./audio_list.txt')
     .then(response => response.text())
     .then(data => {
         console.log('Fetched data:', data); // Add this line to print out the data

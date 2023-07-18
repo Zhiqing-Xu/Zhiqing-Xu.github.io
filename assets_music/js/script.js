@@ -10,6 +10,7 @@ const cover = document.querySelector("#cover");
 const playlistContainer = document.querySelector(".playlist-container");
 const playlist = document.querySelector(".playlist");
 const volumeSlider = document.querySelector("#volume");
+volumeSlider.value = 0.2;
 const loopBtn = document.querySelector("#loop");
 
 
@@ -209,6 +210,9 @@ function nextSong() {
 function initializePlayer() {
     // Mute the audio initially
     audio.muted = false;
+
+    // Set the default volume to 20%
+    audio.volume = 0.2;
 
     // Try to play the song
     tryPlaySong();
