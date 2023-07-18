@@ -18,13 +18,24 @@ const loopBtn = document.querySelector("#loop");
 let songs = [];
 
 fetch('./audio_list.txt')
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return new Response(response.body, { headers: { 'Content-Type': 'text/plain;charset=UTF-8' } }).text();
+    })
     .then(data => {
         console.log('Fetched data:', data); // Add this line to print out the data
 
         // Assume data is a string in the format ['song1', 'song2', 'song3', ...]
         songs = JSON.parse(data.replace(/'/g, '"')); // Replace single quotes with double quotes for JSON parsing
-        // Rest of the code that depends on songs array
+
+        // keep track of songs
+        let songIndex = 0;
+
+        // initially load song info DOM
+        loadSong(songs[songIndex]);
+        createPlaylistItems();
     })
     .catch(error => console.error('Error:', error));
 
