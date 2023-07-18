@@ -19,7 +19,7 @@ for /r "%folderPath%" %%F in (*.wav) do (
 REM Remove leading comma and space, add brackets
 set "output=[%output:~2%]"
 
-REM Write output to file
-echo !output! > "%outputFile%"
+REM Write output to file using PowerShell with UTF-8 encoding
+echo !output! | PowerShell -NoProfile -Command "[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; Out-File -FilePath .\%outputFile% -InputObject (Read-Host -Prompt 'Enter text') -Encoding UTF8"
 
 endlocal
