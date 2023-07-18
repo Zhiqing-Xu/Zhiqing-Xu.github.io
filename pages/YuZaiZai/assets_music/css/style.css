@@ -24,13 +24,13 @@ body {
 }
 
 .music-container {
-  background-color: #fdff79;
+  background-color: rgba(230, 173, 216, 0.4);
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  box-shadow: 0 20px 20px 0 rgba(230, 173, 216, 0.6);
 
   /* flexBox using */
   display: flex;
@@ -207,10 +207,10 @@ body {
 /* Add these styles to your style.css */
 .playlist-container {
   width: 100%; /* Add this line */
-  background-color: #faff97;
+  background-color: rgba(230, 173, 216, 0.5);
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
+  box-shadow: 0 20px 20px 0 rgba(230, 173, 216, 0.8);
   margin-top: 0px;
   margin-bottom: 50px;
   display: none;

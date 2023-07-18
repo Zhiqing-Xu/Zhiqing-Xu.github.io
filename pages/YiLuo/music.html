@@ -2,19 +2,19 @@
 <html lang="en">
 
     <head>
-        <meta charset="UTF-8"> <!-- Add this line -->
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- * font awesome cdn -->
+        <!-- font awesome cdn -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         />
 
-        <!-- * external css / stylesheet -->
+        <!-- external css / stylesheet -->
         <link rel="stylesheet" href="./assets_music/css/style.css" />
 
-        <!-- * linking favicon -->
+        <!-- linking favicon -->
         <link
             rel="shortcut icon"
             href="./assets_music/img/favicon.png"
@@ -22,11 +22,10 @@
         />
     </head>
 
-    
 
     <body>
 
-        <div class="container"> <!-- Add this parent container -->
+        <div class="container">
             <h1><center> <font size="20"> 一萝 </font> </center> </h1>
 
             <div class="music-container play">
@@ -88,9 +87,21 @@
             </div>
         </div>
 
-        <!-- * external js / script -->
+
+        <!-- external js / script -->
         <script src="./assets_music/js/script.js"></script>
+
+        <!-- Bubbly-bg library -->
+        <script src="https://cdn.jsdelivr.net/npm/bubbly-bg@1.0.0/dist/bubbly-bg.js"></script>
+        <script>
+            bubbly({
+                colorStart: '#72bcd4',
+                colorStop: '#e6add8',
+                blur: 1,
+                compose: 'source-over',
+                bubbleFunc:() => `hsla(${Math.random() * 9999}, 100%, 50%, .3)`
+            });
+        </script>
 
     </body>
 </html>
-

@@ -13,8 +13,31 @@ const volumeSlider = document.querySelector("#volume");
 const loopBtn = document.querySelector("#loop");
 
 
+
 // song titles
-const songs = ['一场夏事 - YiLuo', '不老梦 - YiLuo', '修炼爱情 - YiLuo', '凉城 - YiLuo', '半壶纱 - YiLuo', '反正 - YiLuo', '告白气球 - YiLuo', '哎呀呀 - YiLuo', '在树上唱歌 - YiLuo', '天下无双 - YiLuo', '天真 - YiLuo', '宝贝 - YiLuo', '小手拉大手 - YiLuo', '小永远 - YiLuo', '山外小楼夜听雨 - YiLuo', '待我长发及腰 - YiLuo', '心上的风 - YiLuo', '忽而今夏 - YiLuo', '我们说好的 - YiLuo', '我想 - YiLuo', '我想你了 - YiLuo', '我的一个道姑朋友 - YiLuo', '我的女人 - YiLuo', '星月神话 - YiLuo', '星河叹 - YiLuo', '最初的梦想 - 片段 - YiLuo', '最暖的忧伤 - YiLuo', '梦里花 - YiLuo', '椿 - YiLuo', '每一句都很甜 - YiLuo', '永不失联的爱 - YiLuo', '浪费 - YiLuo', '熬夜上瘾 - YiLuo', '爱殇7.0 - YiLuo', '爱的早餐 - YiLuo', '爱的飞行日记 - YiLuo', '爱的魔法 - YiLuo', '等下一个他 - YiLuo', '老伴 - YiLuo', '起风了 - YiLuo', '遗憾 - 片段 - YiLuo', '醉清风 - YiLuo', '静悄悄 - YiLuo', '非你不爱 - YiLuo'];
+let songs = [];
+
+fetch('./audio_list.txt')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return new Response(response.body, { headers: { 'Content-Type': 'text/plain;charset=UTF-8' } }).text();
+    })
+    .then(data => {
+        console.log('Fetched data:', data); // Add this line to print out the data
+
+        // Assume data is a string in the format ['song1', 'song2', 'song3', ...]
+        songs = JSON.parse(data.replace(/'/g, '"')); // Replace single quotes with double quotes for JSON parsing
+
+        // keep track of songs
+        let songIndex = 0;
+
+        // initially load song info DOM
+        loadSong(songs[songIndex]);
+        createPlaylistItems();
+    })
+    .catch(error => console.error('Error:', error));
 
 
 // keep track of songs
@@ -90,7 +113,7 @@ function pauseSong() {
     audio.pause();
 
     // Add this line to hide the playlist when the pause button is clicked
-    playlistContainer.style.display = "none";
+    // playlistContainer.style.display = "none";
 }
 
 
@@ -278,4 +301,5 @@ audio.addEventListener("ended", nextSong);
 
 // Add this event listener to play the song when the page loads
 initializePlayer();
+
 

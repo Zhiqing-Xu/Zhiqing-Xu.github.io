@@ -12,9 +12,32 @@ const playlist = document.querySelector(".playlist");
 const volumeSlider = document.querySelector("#volume");
 const loopBtn = document.querySelector("#loop");
 
-// song titles
-const songs = ['明天不喝酒', '爱殇 - FT'];
 
+
+// song titles
+let songs = [];
+
+fetch('./audio_list.txt')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return new Response(response.body, { headers: { 'Content-Type': 'text/plain;charset=UTF-8' } }).text();
+    })
+    .then(data => {
+        console.log('Fetched data:', data); // Add this line to print out the data
+
+        // Assume data is a string in the format ['song1', 'song2', 'song3', ...]
+        songs = JSON.parse(data.replace(/'/g, '"')); // Replace single quotes with double quotes for JSON parsing
+
+        // keep track of songs
+        let songIndex = 0;
+
+        // initially load song info DOM
+        loadSong(songs[songIndex]);
+        createPlaylistItems();
+    })
+    .catch(error => console.error('Error:', error));
 
 
 // keep track of songs
@@ -90,7 +113,7 @@ function pauseSong() {
     audio.pause();
 
     // Add this line to hide the playlist when the pause button is clicked
-    playlistContainer.style.display = "none";
+    // playlistContainer.style.display = "none";
 }
 
 
